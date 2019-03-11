@@ -9,17 +9,19 @@ const Wrapper = styled.main.attrs({
   max-width: 960px;
   border-bottom: 1px solid #ebf2f6;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #ffa1;
+  text-align:center;
+  color: white;
   margin: 0px auto 30px auto;
   top: -100px;
   padding: 50px;
   box-shadow: 5px 10px 20px 0 #4f5b62
 
   , 10px 40px 32px rgba(0, 0, 0, 0.1);
-  min-height: 150px;
+  min-height: 200px;
 
   @media (max-width: 780px) {
-    width: 90%;
+    width: 100%;
     padding: 25px;
   }
 `

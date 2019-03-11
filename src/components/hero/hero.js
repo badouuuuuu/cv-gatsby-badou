@@ -26,9 +26,12 @@ const HeroTitle = styled.h1`
   margin: 10px 60px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
+
+  color: orange;
 `
 
 class Hero extends React.Component {
+
   render() {
     const { title, className } = this.props
 
@@ -36,6 +39,7 @@ class Hero extends React.Component {
       <HeroContainer className={className}>
         <TitleContainer>
           <HeroTitle>{title}</HeroTitle>
+  
         </TitleContainer>
       </HeroContainer>
     )

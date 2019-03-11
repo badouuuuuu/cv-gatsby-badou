@@ -35,9 +35,10 @@ export default styled(Timeline)`
     margin: 70px 0 0 -1px;
     width: 1px;
     height: calc(100% - 70px);
-    background: #25303B;
+    background: orange;
   }
   .timeline__item {
+    text-align: center;
     width: 100%;
     margin: 0 0 20px 0;
     position: relative;
@@ -63,8 +64,8 @@ export default styled(Timeline)`
     left: 50%;
     margin: 0 0 0 -30px;
     border-radius: 100%;
-    font-size: 12px;
-    font-weight: 900;
+    font-size: 10px;
+    font-weight: 700;
     text-transform: uppercase;
     background: #25303B;
     color: #fff;
@@ -80,6 +81,8 @@ export default styled(Timeline)`
   }
   .timeline__year {
     font-size: 10px;
+    font-style: italic;
+    color: orange;
   }
   .timeline__title {
     padding: 15px;

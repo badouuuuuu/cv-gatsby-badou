@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 
 
 const listStyleRight = {
-  color: "#555",
+  color: "orange",
   listStyle: "none",
   margin: "0 auto",
   fontSize: ".8rem",
@@ -12,7 +12,7 @@ const listStyleRight = {
 }
 
 const listStyleleft = {
-  color: "#555",
+  color: "orange",
   listStyle: "none",
   margin: "0 auto",
   fontSize: ".7rem",

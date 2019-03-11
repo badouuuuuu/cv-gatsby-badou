@@ -16,11 +16,12 @@ import Repositories from '../components/repositories'
 const Separator = styled.hr`
   margin-top: 14px;
   margin-bottom: 16px;
+  color: orange;
 `
 
 class Home extends React.Component {
   render () {
-    const title = 'Bienvenu, je suis Youssef'
+    const title = 'Bonjour'
     return (
       <Layout location={this.props.location}>
         <SEO
@@ -62,6 +63,7 @@ class Home extends React.Component {
               <Col xs={4} sm={4}>
                 <About title='A propos' text={siteConfig.authorDescription}/>
               </Col>
+              <Separator />
               <Col xs={4} sm={4}>
                 <Skills title='Mes skills' skills={siteConfig.skills} />
               </Col>

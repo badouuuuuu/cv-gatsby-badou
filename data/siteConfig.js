@@ -12,48 +12,48 @@ module.exports = {
   
   jobs: [
     {
-      company: "Lendico",
+      company: "BeCode.org",
       begin: {
-        month: 'apr',
+        month: 'oct',
         year: '2018'
       },
       duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
+      occupation: "Web Developper",
+      description: "Début de formation en tant que web developpeur Fullstack chez BeCode.org"
   
     },
     
     {
-      company: "Lendico",
+      company: "SNT - IPG Group",
       begin: {
-        month: 'apr',
+        month: 'aou',
         year: '2018'
       },
-      duration: null,
-      occupation: "Frontend developer",
-      description: "I integrate the Frontend team responsible for developing and maintaining the online lending platform."
+      duration: "7 ans & 5 mois",
+      occupation: "Service clientèle",
+      description: "Agent Middle-Office & Service Urgent projet Luminus"
   
     },
     
     
     {
-      company: "Anapro",
+      company: "Call-It",
       begin: {
         month: 'dec',
-        year: '2016'
+        year: '2011'
       },
-      duration: '1 yr e 5 mos',
-      occupation: "Fullstack developer",
-      description: "Development and maintenance, corrective and preventive, of web applications for the real estate market."
+      duration: '2 ans & 5 mois',
+      occupation: "Support Clientèle",
+      description: "Middle-Office sur le projet Luminus, service déménagement"
     }, {
       company: "Target Power Group",
       begin: {
         month: 'set',
-        year: '2012'
+        year: '2010'
       },
-      duration: '4 yrs e 3 mos',
+      duration: '1 an',
       occupation: "Support clientèle",
-      description: "Responsible for the implementation and parameterization of the system, training and customer support. Acting also in person in real estate launches guaranteeing the success and good use of the tool."
+      description: "Agent Call Center Front-Office sur le projet Belgacom TV/NET/TEL, par la suite promu en tant que formateur TV & NET pendant 2 années. Expert Back Office seconde ligne"
   
     },
     /* ... */
@@ -66,7 +66,7 @@ module.exports = {
   },
   siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/background.jpg',
+  siteCover: '/images/space2.jpg',
   googleAnalyticsId: 'UA-131359385-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
@@ -76,6 +76,8 @@ module.exports = {
     {
       label: 'Youssef El Hirech',
       url: '/',
+      about: 'A propos',
+      url: '/'
     }
   ]
 }

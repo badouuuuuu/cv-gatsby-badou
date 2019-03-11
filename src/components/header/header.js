@@ -12,26 +12,30 @@ const HeaderWrapper = styled.header`
   display: block;
   width: 100%;
   z-index: 1000;
-  background-color: #25303B;
+  background-color: #000a12;
 `
 
 const HeaderNav = styled.nav`
   margin-left: auto;
   margin-right: auto;
-  height: 60px;
+  width: 100%;
+  height: 40px;
   display: flex;
+  font-size: .7rem;
+  font-weight: bold;
   flex-direction: row;
   max-width: 960px;
   z-index: 1000;
   justify-content: space-between;
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #25303B;
+  background-color: #000a12;
 `
 
 const HeaderLinkGroup = styled.div`
   display: flex;
   flex-direction: row;
+
 ` 
 
 const HeaderLink = styled(Link)`
@@ -39,7 +43,7 @@ const HeaderLink = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: #fff;
+  color: white;
   border: 0;
   margin: 0;
   margin-right: 0.5rem;
@@ -53,9 +57,8 @@ const GithubLink = styled(({ className }) => (
     className={className}
     href={`https://github.com/${siteConfig.githubUsername}`}
     target='_blank'
-    rel="noopener noreferrer"
-  >
-    <FaGithub size={32} />
+    rel="noopener noreferrer">
+    <FaGithub size={24} />
   </a>
 ))`
   position: relative;
