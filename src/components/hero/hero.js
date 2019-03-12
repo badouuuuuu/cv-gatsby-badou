@@ -2,8 +2,8 @@ import React from 'react'
 import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import styled from 'styled-components'
-import { Link } from 'react-scroll'
 
+import { Link } from 'react-scroll'
 const HeroContainer = styled.div`
   position: relative;
   display: table;
@@ -12,6 +12,11 @@ const HeroContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: contrast(130%);
+
+  .clicktoscroll p:hover{
+    color: red;
+  }
 `
 
 const TitleContainer = styled.div`
@@ -25,22 +30,11 @@ const HeroTitle = styled.h1`
   font-weight: 700;
   font-size: 2.5rem;
   margin: 10px 60px;
-  color: #fff;
+
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
   color: orange;
 `
 
-const StyleButton = {
-  cursor: "pointer", 
-  border: "none", 
-  backgroundColor: "#fff5", 
-  color:"orange", 
-  borderRadius: ".5rem", 
-  width: "40px",
-  height: "40px",
-  padding: ".5rem",
-  outline: "none",
-}
 
 
 
@@ -50,13 +44,30 @@ class Hero extends React.Component {
     const { title, className } = this.props
 
     return (
+      <>
+      <div id="top"></div>
       <HeroContainer className={className}>
         <TitleContainer>
           <HeroTitle>{title}</HeroTitle>
+
+          <Link 
+    activeClass="active"
+  to="skills"
+  spy={true}
+  smooth={true}
+ duration={500} onSetActive={this.handleSetActive}
+ offset={-350} 
+>
+
+    <p className="clicktoscroll" style={{ cursor: "pointer", color:"orange" }}>Click to scroll</p> 
+    </Link> 
+
+
       <br/>
 
         </TitleContainer>
       </HeroContainer>
+      </>
     )
   }
 }
@@ -64,11 +75,13 @@ class Hero extends React.Component {
 export default styled(Hero)`
   
   ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
-  height: 110vh;
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
 
 
 `

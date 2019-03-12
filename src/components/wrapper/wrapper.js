@@ -5,14 +5,14 @@ const Wrapper = styled.main.attrs({
 })`
   position: relative;
   border-radius: 3px;
-  width: 85%;
+  width: 75%;
   max-width: 720px;
   word-wrap: break-word;
   background-color: #ffa1;
   text-align:center;
   color: white;
   margin: 0px auto 30px auto;
-  top: -90px;
+  top: -40px;
   padding: 50px;
   box-shadow: 5px 1px 15px 3px #4f5b62
 

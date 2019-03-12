@@ -68,8 +68,8 @@ module.exports = {
   },
   siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/space2.jpg',
-  siteFooter: '/images/404.jpeg',
+  siteCover: '/images/back.jpeg',
+  siteFooter: '/images/back.jpeg',
   googleAnalyticsId: 'UA-131359385-1',
   background_color: '#ffffff',
   theme_color: '#25303B',

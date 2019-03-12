@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { FaGithub } from "react-icons/fa"
+import siteConfig from '../../../data/siteConfig'
+
 
 const FooterWrapper = styled.header`
   position: fixed;
@@ -11,6 +14,9 @@ const FooterWrapper = styled.header`
   z-index: 1000;
   background-color: #000a12;
   opacity: 6 ;
+
+
+
 `
 
 const FooterNav = styled.nav`
@@ -20,7 +26,7 @@ const FooterNav = styled.nav`
   height: 40px;
   display: flex;
   font-size: .7rem;
-  font-weight: bold;
+
   flex-direction: row;
   max-width: 960px;
   z-index: 1000;
@@ -28,8 +34,30 @@ const FooterNav = styled.nav`
   overflow-x: auto;
   overflow-y: hidden;
   background-color: #000a12;
+  
 `
 
+const GithubLink = styled(({ className }) => (
+  <a 
+    className={className}
+    href={`https://github.com/${siteConfig.githubUsername}`}
+    target='_blank'
+    rel="noopener noreferrer">
+    <FaGithub size={20} />
+  </a>
+))`
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: 0;
+  margin: 0;
+  margin-right: 0.5rem;
+
+  min-width: 32px;
+  z-index: 10;
+
+`
 
 class Footer extends React.Component {
   render () {
@@ -38,11 +66,13 @@ class Footer extends React.Component {
       <FooterWrapper>
         <FooterNav>
       
-          <footer  style={{color: "white", margin: "0 auto", paddingTop: ".5rem", fontSize: ".4rem"}}>
-            <code>
+          <footer style={{margin: "0 auto", paddingTop: ".3rem"}}>
+            <p className="websitefooter" style={{color: "white", margin: "0 auto",  fontSize: ".7rem", textAlign: "center"}}>
             www.badou.be
-            </code>
+            </p>
+   
           </footer>
+          <GithubLink />
         </FooterNav>
       </FooterWrapper>
     )

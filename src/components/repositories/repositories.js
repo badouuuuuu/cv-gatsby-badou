@@ -27,7 +27,7 @@ class Repositories extends React.Component {
     const { status } = this.state
     return (
       <div className={this.props.className}>
-        <h2 id="github">Projet sur Github </h2> 
+        <h2 >Projet sur Github </h2> 
         <hr/>
         {status === "loading" && <div className='repositories__loader'><Loader /></div>}
         {status === "ready" &&

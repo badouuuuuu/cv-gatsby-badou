@@ -1,168 +1,138 @@
 import React from 'react'
-import { Link } from 'gatsby'
+
 import styled from 'styled-components'
-import { FaGithub } from "react-icons/fa"
-import siteConfig from '../../../data/siteConfig'
+
+import { Link } from 'react-scroll'
 
 const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
   margin: 0 auto;
-  display: block;
+  display: flex;
   width: 100%;
   z-index: 1000;
   background-color: #000a12;
+
+  overflow:hidden;
+
+
+
+.navbaritems a {
+  color:white;
+  text-decoration: none;
+  margin: 0 auto;
+  color: white;
+  font-weight: 200;
+  outline: none;
+  margin-top: .8rem;
+  padding-right: 2em;
+
+}
+.navbaritems a:hover {
+  color: orange;
+}
+.navbaritems a:active {
+  color: orange;
+}
+
 `
 
 const HeaderNav = styled.nav`
-  margin-left: auto;
-  margin-right: auto;
+
   width: 100%;
-  height: 40px;
-  display: flex;
-  font-size: .7rem;
-  font-weight: bold;
-  flex-direction: row;
-  max-width: 960px;
+
+
+  min-height: 2rem;
+  padding: .1rem;
+  font-size: .9rem;
+
+  max-width: 100%;
   z-index: 1000;
-  justify-content: space-between;
+
+
   overflow-x: auto;
   overflow-y: hidden;
   background-color: #000a12;
 `
 
 const HeaderLinkGroup = styled.div`
+
   display: flex;
   flex-direction: row;
-
 ` 
 
-const headerNavLink = `
-display: inline-flex;
-color: white;
 
-p {
-  color: white;
-  margin: 1rem;
-  padding: 3rem;
-  display: inline-flex;
 
-}
-p:hover {
-  color: orange;
-}
 
-links {
-}`
-
-const HeaderLink = styled(Link)`
-  position: relative;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: white;
-  border: 0;
-  margin: 0;
-  margin-right: 0.5rem;
-  padding-left: 20px;
-  padding-right: 20px;
-  min-width: 42px;
-  z-index: 10;
-`
-const GithubLink = styled(({ className }) => (
-  <a 
-    className={className}
-    href={`https://github.com/${siteConfig.githubUsername}`}
-    target='_blank'
-    rel="noopener noreferrer">
-    <FaGithub size={24} />
-  </a>
-))`
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  border: 0;
-  margin: 0;
-  margin-right: 0.5rem;
-  padding-left: 20px;
-  padding-right: 20px;
-  min-width: 42px;
-  z-index: 10;
-
-`
 
 class Header extends React.Component {
   render () {
-    const { headerLinks } = siteConfig
 
     return (
       <HeaderWrapper>
         <HeaderNav>
           <HeaderLinkGroup>
-            {headerLinks.map((headerLink, i) => (
-              <HeaderLink to={headerLink.url} key={`header-link-${i}`}>
-                {headerLink.label}
-              </HeaderLink>
-            ))}
+          
+   
           </HeaderLinkGroup>
 
-      <div style={{headerNavLink}}>
+      <div className="navbaritems" style={{display: 'flex', listStyle: 'none'}}>
     <Link 
     activeClass="active"
-  to="#about"
+  to="skills"
   spy={true}
   smooth={true}
-  offset={50} duration={500} onSetActive={this.handleSetActive}
+ duration={500} onSetActive={this.handleSetActive}
+ offset={-50} 
 >
 
-    <p style={{margin: "-.9rem", cursor: "pointer"}}>A propos</p> 
+    <p style={{ cursor: "pointer"}}>Moi</p> 
     </Link>
 
     <Link 
     activeClass="active"
-  to="#skills"
+  to="skills"
   spy={true}
   smooth={true}
-  offset={50} duration={500} onSetActive={this.handleSetActive}
+  offset={-50} duration={900} onSetActive={this.handleSetActive}
 >
 
-    <p style={{margin: "-.9rem", cursor: "pointer"}}>Mes skills</p> 
+    <p style={{ cursor: "pointer"}}>Skills</p> 
     </Link>
     <Link 
     activeClass="active"
-  to="#xp"
+  to="xp"
   spy={true}
   smooth={true}
-  offset={10} duration={500} onSetActive={this.handleSetActive}
+  offset={-100} duration={900} onSetActive={this.handleSetActive}
 >
 
-    <p style={{margin: "-.9rem", cursor: "pointer"}}>Expérience Professionelle</p> 
+    <p style={{ cursor: "pointer"}}>Expérience</p> 
     </Link>
     <Link 
     activeClass="active"
-  to="#github"
+  to="github"
   spy={true}
   smooth={true}
-  offset={10} duration={700} onSetActive={this.handleSetActive}
+  offset={-100} duration={900} onSetActive={this.handleSetActive}
 >
 
-    <p style={{margin: "-.9rem", cursor: "pointer"}}>Projet Github</p> 
+    <p style={{ cursor: "pointer"}}>Projet</p> 
     </Link>
 
     <Link 
     activeClass="active"
-  to="#footer"
+  to="footer"
   spy={true}
   smooth={true}
-  offset={10} duration={700} onSetActive={this.handleSetActive}
+  duration={700} onSetActive={this.handleSetActive}
 >
 
-    <p style={{margin: "-.9rem", cursor: "pointer"}}>CV & Social Media</p> 
+    <p style={{ cursor: "pointer"}}>CV</p> 
     </Link>
     </div>
-          <GithubLink />
+
         </HeaderNav>
       </HeaderWrapper>
     )

@@ -5,8 +5,8 @@ import siteConfig from '../../../data/siteConfig'
 
 const Timeline = ({ className }) => {
   return (
-    <div className={className}>
-      <h1 id="xp">Expérience Professionelle</h1>
+    <div id="xp" className={className}>
+      <h1 >Expérience Professionelle</h1>
       <hr/>
       <br/>
       {siteConfig.jobs && siteConfig.jobs.map(job => (

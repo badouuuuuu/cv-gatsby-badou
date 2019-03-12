@@ -14,6 +14,12 @@ const FooterContainer = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  filter: contrast(100%);
+  img:hover{
+
+    outline: none;
+
+  }
 `
 
 const FooterTitleContainer = styled.div`
@@ -38,9 +44,9 @@ const StyleButton = {
   backgroundColor: "#fff5", 
   color:"orange", 
   borderRadius: ".5rem", 
-  width: "32px",
-  height: "32px",
-  padding: ".5rem",
+  width: "40px",
+  height: "40px",
+  margin: "1rem",
   outline: "none",
 }
 
@@ -54,20 +60,22 @@ class FooterHero extends React.Component {
       <FooterContainer className={className}>
         <FooterTitleContainer>
           <FooterHeroTitle>{title}</FooterHeroTitle>
-         
-          <div id="footer"><a href="https://drive.google.com/file/d/1XYVN2qqVQKUsb4TNzdw4vaFXd5kQTCMT/view?usp=sharing" target="_blank" rel="noopener noreferrer"  ><button className="button_footer" style={StyleButton}><img src={downloadIcon} alt="download"/></button></a></div>
+
+        <p className="download_cv">  Télécharger mon CV </p>
+        <a href="https://drive.google.com/file/d/1XYVN2qqVQKUsb4TNzdw4vaFXd5kQTCMT/view?usp=sharing" target="_blank" rel="noopener noreferrer"  > <button className="button_footer" style={StyleButton}><img src={downloadIcon} alt="download"/></button></a>
+          
           <div className="social">
                   {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
-                    <FaGithub className="social-icon" size="24" />
+                    <FaGithub className="social-icon" size="22" />
                   </a>}
                   {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                    <FaLinkedin className="social-icon" size="24"  />
+                    <FaLinkedin className="social-icon" size="22"  />
                   </a>}
                   {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
-                    <FaTwitter className="social-icon" size="24" />
+                    <FaTwitter className="social-icon" size="22" />
                   </a>}
                   {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
-                    <FaEnvelope className="social-icon" size="24" />
+                    <FaEnvelope className="social-icon" size="22" />
                   </a>}
                 </div>
                   </FooterTitleContainer>
@@ -79,22 +87,28 @@ class FooterHero extends React.Component {
 export default styled(FooterHero)`
   
   ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
-  height: 25vh;
+
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+.download_cv{
+  margin-top: 1rem;
+  margin-bottom: -.35rem;
+  color: grey;
+}
 
 
   .social {
-    margin-top: .1rem;
+
     margin-bottom: 3rem;
+
   }
 
   .social-link {
     padding: .5rem;
-    color: #fff;
+    color: grey;
   }
 
   a.social-link.twitter:hover {
@@ -113,8 +127,5 @@ export default styled(FooterHero)`
     color: #c23a2b;
   }
 
-  button:hover {
-    color: red;
-    background-color: orange;
-  }
+
 `
