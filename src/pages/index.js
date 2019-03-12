@@ -13,12 +13,8 @@ import Skills from '../components/skills'
 import Timeline from '../components/timeline'
 import Repositories from '../components/repositories'
 import Footer from '../components/footer'
+import FooterHero from '../components/footerhero'
 
-const Separator = styled.hr`
-  margin-top: 14px;
-  margin-bottom: 16px;
-  color: orange;
-`
 
 class Home extends React.Component {
   render () {
@@ -63,17 +59,24 @@ class Home extends React.Component {
             </Row>
             <Row>
               <Col xs={4} sm={4}>
+              <div id="about"></div>
+
                 <About title='A propos' text={siteConfig.authorDescription}/>
               </Col>
+              <div id="skills"></div>
+
               <Col xs={4} sm={4}>
                 <Skills title='Mes skills' skills={siteConfig.skills} />
               </Col>
             </Row>
+
             <Timeline />
             <Repositories />
           </Container>
           
         </Wrapper>
+        
+        <FooterHero/>
         <Footer/>
       </Layout>
     )
@@ -88,9 +91,9 @@ export default styled(Home)`
 
   hr {
     background-color: orange;
-    width: 25%;
+    width: 35%;
     margin: 1.2rem auto;
-    padding: .05rem;
+    padding: .07rem;
     
   }
 

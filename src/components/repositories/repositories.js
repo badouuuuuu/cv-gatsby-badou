@@ -27,7 +27,7 @@ class Repositories extends React.Component {
     const { status } = this.state
     return (
       <div className={this.props.className}>
-        <h2>Dernier projet sur Github</h2>
+        <h2 id="github">Projet sur Github </h2> 
         <hr/>
         {status === "loading" && <div className='repositories__loader'><Loader /></div>}
         {status === "ready" &&
@@ -37,7 +37,7 @@ class Repositories extends React.Component {
                 {this.state.repos.map(repo => (
                   <React.Fragment key={repo.name}>
                     <div className="repositories__repo">
-                      <a className='repositories__repo-link' href={repo.html_url} target="_blank">
+                      <a className='repositories__repo-link' href={repo.html_url} rel="noopener noreferrer"  target="_blank">
                         <strong>{repo.name}</strong>
                       </a>
                       <div className="repositories__desc">{repo.description}</div>
@@ -68,10 +68,11 @@ export default styled(Repositories)`
   .repositories__repo {
     position: relative;
     color:grey;
-    border: 1px solid grey;
+    border: .04rem solid orange;
     padding: 1rem;
     border-radius: 1rem;
     margin: 2rem;
+    cursor: pointer;
   }
 
   .repositories__desc {

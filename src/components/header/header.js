@@ -38,6 +38,24 @@ const HeaderLinkGroup = styled.div`
 
 ` 
 
+const headerNavLink = `
+display: inline-flex;
+color: white;
+
+p {
+  color: white;
+  margin: 1rem;
+  padding: 3rem;
+  display: inline-flex;
+
+}
+p:hover {
+  color: orange;
+}
+
+links {
+}`
+
 const HeaderLink = styled(Link)`
   position: relative;
   text-decoration: none;
@@ -89,6 +107,61 @@ class Header extends React.Component {
               </HeaderLink>
             ))}
           </HeaderLinkGroup>
+
+      <div style={{headerNavLink}}>
+    <Link 
+    activeClass="active"
+  to="#about"
+  spy={true}
+  smooth={true}
+  offset={50} duration={500} onSetActive={this.handleSetActive}
+>
+
+    <p style={{margin: "-.9rem", cursor: "pointer"}}>A propos</p> 
+    </Link>
+
+    <Link 
+    activeClass="active"
+  to="#skills"
+  spy={true}
+  smooth={true}
+  offset={50} duration={500} onSetActive={this.handleSetActive}
+>
+
+    <p style={{margin: "-.9rem", cursor: "pointer"}}>Mes skills</p> 
+    </Link>
+    <Link 
+    activeClass="active"
+  to="#xp"
+  spy={true}
+  smooth={true}
+  offset={10} duration={500} onSetActive={this.handleSetActive}
+>
+
+    <p style={{margin: "-.9rem", cursor: "pointer"}}>Expérience Professionelle</p> 
+    </Link>
+    <Link 
+    activeClass="active"
+  to="#github"
+  spy={true}
+  smooth={true}
+  offset={10} duration={700} onSetActive={this.handleSetActive}
+>
+
+    <p style={{margin: "-.9rem", cursor: "pointer"}}>Projet Github</p> 
+    </Link>
+
+    <Link 
+    activeClass="active"
+  to="#footer"
+  spy={true}
+  smooth={true}
+  offset={10} duration={700} onSetActive={this.handleSetActive}
+>
+
+    <p style={{margin: "-.9rem", cursor: "pointer"}}>CV & Social Media</p> 
+    </Link>
+    </div>
           <GithubLink />
         </HeaderNav>
       </HeaderWrapper>

@@ -8,7 +8,9 @@ module.exports = {
   authorDescription: ` Je suis un developpeur junior ayant commencé le code il y a tout juste 6 mois.
   Avant celà, j'ai travaillé pendant près de 10 ans dans un service clientèle. Totalement passioné de technologie et de numérique.
   Je suis a la recherche d'un stage dans le domaine du web, que celà soit en backend, ou frontend.
-  J'aime travailler sous <strong>Javascript, NodeJS, ou ReactJS</strong>`,
+  J'aime travailler sous <strong>Javascript, NodeJS, ou ReactJS</strong>. <br/>
+   <br/> Actuellement a la recherche d'un stage, je suis prêt a apprendre de nouveaux language,
+   ou d'appronfondir ceux déjà présent dans ma liste de skills`,
   
   jobs: [
     {
@@ -67,6 +69,7 @@ module.exports = {
   siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
   pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
   siteCover: '/images/space2.jpg',
+  siteFooter: '/images/404.jpeg',
   googleAnalyticsId: 'UA-131359385-1',
   background_color: '#ffffff',
   theme_color: '#25303B',

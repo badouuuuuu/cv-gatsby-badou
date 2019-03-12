@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { FaGithub } from "react-icons/fa"
-import siteConfig from '../../../data/siteConfig'
 
-const HeaderWrapper = styled.header`
+const FooterWrapper = styled.header`
   position: fixed;
   bottom: 0;
   left: 0;
@@ -16,7 +13,7 @@ const HeaderWrapper = styled.header`
   opacity: 6 ;
 `
 
-const HeaderNav = styled.nav`
+const FooterNav = styled.nav`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -33,64 +30,21 @@ const HeaderNav = styled.nav`
   background-color: #000a12;
 `
 
-const HeaderLinkGroup = styled.div`
-  display: flex;
-  flex-direction: row;
-
-` 
-
-const HeaderLink = styled(Link)`
-  position: relative;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: white;
-  border: 0;
-  margin: 0;
-  margin-right: 0.5rem;
-  padding-left: 20px;
-  padding-right: 20px;
-  min-width: 42px;
-  z-index: 10;
-`
-const GithubLink = styled(({ className }) => (
-  <a 
-    className={className}
-    href={`https://github.com/${siteConfig.githubUsername}`}
-    target='_blank'
-    rel="noopener noreferrer">
-    <FaGithub size={24} />
-  </a>
-))`
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  border: 0;
-  margin: 0;
-  margin-right: 0.5rem;
-  padding-left: 20px;
-  padding-right: 20px;
-  min-width: 42px;
-  z-index: 10;
-
-`
 
 class Footer extends React.Component {
   render () {
-    const { headerLinks } = siteConfig
 
     return (
-      <HeaderWrapper>
-        <HeaderNav>
+      <FooterWrapper>
+        <FooterNav>
       
           <footer  style={{color: "white", margin: "0 auto", paddingTop: ".5rem", fontSize: ".4rem"}}>
             <code>
             www.badou.be
             </code>
           </footer>
-        </HeaderNav>
-      </HeaderWrapper>
+        </FooterNav>
+      </FooterWrapper>
     )
   }
 }

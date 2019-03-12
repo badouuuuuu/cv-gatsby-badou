@@ -5,17 +5,16 @@ import React, { Fragment } from 'react'
 const listStyleRight = {
   color: "orange",
   listStyle: "none",
-  margin: "0 auto",
-  fontSize: ".8rem",
-  gridColumn: "1/2",
+  margin: "1rem auto",
+  fontSize: "1rem",
   display: "grid"
 }
 
 const listStyleleft = {
   color: "orange",
   listStyle: "none",
-  margin: "0 auto",
-  fontSize: ".7rem",
+  margin: "1rem auto",
+  fontSize: "1rem",
   gridColumn: "2",
   display: "grid"
 }

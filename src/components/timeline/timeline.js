@@ -6,7 +6,7 @@ import siteConfig from '../../../data/siteConfig'
 const Timeline = ({ className }) => {
   return (
     <div className={className}>
-      <h1>Expérience Professionelle</h1>
+      <h1 id="xp">Expérience Professionelle</h1>
       <hr/>
       <br/>
       {siteConfig.jobs && siteConfig.jobs.map(job => (
@@ -35,7 +35,7 @@ export default styled(Timeline)`
     left: 50%;
     top: 0;
     margin: 70px 0 0 -1px;
-    width: 1px;
+    width: .1rem;
     height: calc(100% - 70px);
     background: orange;
   }
@@ -44,18 +44,23 @@ export default styled(Timeline)`
     width: 100%;
     margin: 0 0 20px 0;
     position: relative;
+    margin-bottom: 2rem;
+    
+    
   }
   .timeline__item:after {
     content: '';
     display: block;
     clear: both;
+
   }
   .timeline__item div.inner {
     width: 100%;
     float: left;
     margin: 85px 0 0 0;
-    border-radius: 6px;
-    border: 1px solid #25303B;
+    border-radius: .5rem;
+    border: .15rem solid orange;
+    
   }
   .timeline__date {
     display: block;
@@ -72,6 +77,7 @@ export default styled(Timeline)`
     background: #25303B;
     color: #fff;
     box-shadow: 0 0 0 7px #fff;
+    
   }
   .timeline__date span {
     display: block;
@@ -118,8 +124,15 @@ export default styled(Timeline)`
   .timeline__title {
     background: #25303B;
   }
+
+  .inner p {
+    font-style: italic;
+
+  }
   .timeline__title:after {
-    background: #25303B;
+    background: orange;
+    border: .1rem solid orange;
+
   }
 
   .timeline__title--small {
@@ -135,6 +148,7 @@ export default styled(Timeline)`
   .timeline__item div.inner h2:after {
     top: 20px;
     left: unset;
+    
     right: -5px;
   }
   .timeline__item:nth-child(2n+2) div.inner h2:after {

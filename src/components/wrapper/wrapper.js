@@ -6,8 +6,7 @@ const Wrapper = styled.main.attrs({
   position: relative;
   border-radius: 3px;
   width: 85%;
-  max-width: 800px;
-  border-bottom: 1px solid #ebf2f6;
+  max-width: 720px;
   word-wrap: break-word;
   background-color: #ffa1;
   text-align:center;
@@ -15,7 +14,7 @@ const Wrapper = styled.main.attrs({
   margin: 0px auto 30px auto;
   top: -90px;
   padding: 50px;
-  box-shadow: 5px 10px 20px 0 #4f5b62
+  box-shadow: 5px 1px 15px 3px #4f5b62
 
   , 10px 40px 32px rgba(0, 0, 0, 0.1);
   min-height: 200px;

@@ -2,7 +2,7 @@ import React from 'react'
 import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import styled from 'styled-components'
-import downloadIcon from '../../assets/download.svg'
+import { Link } from 'react-scroll'
 
 const HeroContainer = styled.div`
   position: relative;
@@ -23,7 +23,7 @@ const TitleContainer = styled.div`
 
 const HeroTitle = styled.h1`
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 10px 60px;
   color: #fff;
   text-shadow: 1px 1px 4px rgba(34, 34, 34, 0.6);
@@ -36,8 +36,8 @@ const StyleButton = {
   backgroundColor: "#fff5", 
   color:"orange", 
   borderRadius: ".5rem", 
-  width: "32px",
-  height: "32px",
+  width: "40px",
+  height: "40px",
   padding: ".5rem",
   outline: "none",
 }
@@ -53,8 +53,8 @@ class Hero extends React.Component {
       <HeroContainer className={className}>
         <TitleContainer>
           <HeroTitle>{title}</HeroTitle>
-    <div><a href="https://drive.google.com/file/d/1XYVN2qqVQKUsb4TNzdw4vaFXd5kQTCMT/view?usp=sharing" target="_blank"><button style={StyleButton}><img src={downloadIcon}/></button></a></div>
-    <p style={{color: "#000a12", paddingBottom: "1rem"}}>Mon CV</p> 
+      <br/>
+
         </TitleContainer>
       </HeroContainer>
     )
@@ -69,4 +69,6 @@ export default styled(Hero)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+
 `
