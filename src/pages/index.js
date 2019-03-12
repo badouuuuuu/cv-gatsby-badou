@@ -12,6 +12,7 @@ import About from '../components/about'
 import Skills from '../components/skills'
 import Timeline from '../components/timeline'
 import Repositories from '../components/repositories'
+import Footer from '../components/footer'
 
 const Separator = styled.hr`
   margin-top: 14px;
@@ -23,12 +24,13 @@ class Home extends React.Component {
   render () {
     const title = 'Bonjour'
     return (
+
       <Layout location={this.props.location}>
         <SEO
           title={title}
-          keywords={['gatsbyjs', 'react', 'curriculum']}
+          keywords={['gatsbyjs', 'react', 'curriculum', 'belgium', 'stage', 'work', 'web', 'developper', 'developpeur', 'becode', 'becode.org', 'badouuuuuu', 'Youssef', 'el', ]}
         />
-
+ 
         <Hero
           heroImg={siteConfig.siteCover}
           title={title}
@@ -48,7 +50,7 @@ class Home extends React.Component {
                     <FaGithub className="social-icon" size="32" />
                   </a>}
                   {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                    <FaLinkedin className="social-icon" size="32" />
+                    <FaLinkedin className="social-icon" size="32"  />
                   </a>}
                   {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
                     <FaTwitter className="social-icon" size="32" />
@@ -63,17 +65,16 @@ class Home extends React.Component {
               <Col xs={4} sm={4}>
                 <About title='A propos' text={siteConfig.authorDescription}/>
               </Col>
-              <Separator />
               <Col xs={4} sm={4}>
                 <Skills title='Mes skills' skills={siteConfig.skills} />
               </Col>
             </Row>
-            <Separator />
             <Timeline />
-            <Separator />
             <Repositories />
           </Container>
+          
         </Wrapper>
+        <Footer/>
       </Layout>
     )
   }
@@ -83,6 +84,14 @@ export default styled(Home)`
   .page-content {
     max-width: 100%;
     margin-bottom: 40px;
+  }
+
+  hr {
+    background-color: orange;
+    width: 25%;
+    margin: 1.2rem auto;
+    padding: .05rem;
+    
   }
 
   .avatar {

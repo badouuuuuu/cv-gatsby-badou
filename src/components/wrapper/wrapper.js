@@ -5,15 +5,15 @@ const Wrapper = styled.main.attrs({
 })`
   position: relative;
   border-radius: 3px;
-  width: 80%;
-  max-width: 960px;
+  width: 85%;
+  max-width: 800px;
   border-bottom: 1px solid #ebf2f6;
   word-wrap: break-word;
   background-color: #ffa1;
   text-align:center;
   color: white;
   margin: 0px auto 30px auto;
-  top: -100px;
+  top: -90px;
   padding: 50px;
   box-shadow: 5px 10px 20px 0 #4f5b62
 

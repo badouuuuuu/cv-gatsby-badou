@@ -30,7 +30,7 @@ export default ({ title = 'Skills', skills = [] }) => {
   return (
     <Fragment>
       <h1 style={{  margin: "0 auto"}}>{title}</h1>
-      <hr style={{  backgroundColor: "orange", width: "10rem", margin: "0 auto", marginBottom: "1rem" }} />
+      <hr/>
       <div style={gridList}>
           <ul style={listStyleRight} >
                 <li>HTML</li>

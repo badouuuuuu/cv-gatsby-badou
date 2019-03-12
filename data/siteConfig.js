@@ -76,8 +76,6 @@ module.exports = {
     {
       label: 'Youssef El Hirech',
       url: '/',
-      about: 'A propos',
-      url: '/'
     }
   ]
 }

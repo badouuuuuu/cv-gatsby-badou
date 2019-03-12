@@ -7,6 +7,8 @@ const Timeline = ({ className }) => {
   return (
     <div className={className}>
       <h1>Expérience Professionelle</h1>
+      <hr/>
+      <br/>
       {siteConfig.jobs && siteConfig.jobs.map(job => (
         <article key={job.begin.month + job.begin.year} className='timeline__item'>
           <div className="inner">

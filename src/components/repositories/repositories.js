@@ -28,6 +28,7 @@ class Repositories extends React.Component {
     return (
       <div className={this.props.className}>
         <h2>Dernier projet sur Github</h2>
+        <hr/>
         {status === "loading" && <div className='repositories__loader'><Loader /></div>}
         {status === "ready" &&
           this.state.repos && (
@@ -39,7 +40,7 @@ class Repositories extends React.Component {
                       <a className='repositories__repo-link' href={repo.html_url} target="_blank">
                         <strong>{repo.name}</strong>
                       </a>
-                      <div>{repo.description}</div>
+                      <div className="repositories__desc">{repo.description}</div>
                       <div className="repositories__repo-date">
                         Updated: {new Date(repo.updated_at).toUTCString()}
                       </div>
@@ -67,12 +68,21 @@ export default styled(Repositories)`
   .repositories__repo {
     position: relative;
     color:grey;
+    border: 1px solid grey;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 2rem;
+  }
+
+  .repositories__desc {
+    font-size: .5rem;
+    color: white;
   }
 
   .repositories__repo-link {
     text-decoration: none;
     color: orange;
-    font-size: .8rem;
+    font-size: 1rem;
   }
 
   .repositories__repo-date {
@@ -86,18 +96,12 @@ export default styled(Repositories)`
     top: 0;
     right: 0;
     color: orange;
+    margin-right: 1rem;
+    margin-top: 1rem;
   }
 
   .repositories__loader {
     display: flex;
-
-  }
-
-  hr {
-    margin-top: 16px;
-    width: 100%;
-    background-color:#fffa1;
-    text-align:center;
 
   }
 
