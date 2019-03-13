@@ -4,7 +4,7 @@ module.exports = {
   authorName: 'Youssef El Hirech',
   twitterUsername: 'badouuuuuu',
   githubUsername: 'badouuuuuu',
-  authorAvatar: '/images/avatar2.jpeg',
+  authorAvatar: './images/avatar2.jpeg',
   authorDescription: ` Je suis un developpeur junior ayant commencé le code il y a tout juste 6 mois.
   Avant celà, j'ai travaillé pendant près de 10 ans dans un service clientèle. Totalement passioné de technologie et de numérique.
   Je suis a la recherche d'un stage dans le domaine du web, que celà soit en backend, ou frontend.
@@ -68,8 +68,8 @@ module.exports = {
   },
   siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
   pathPrefix: '/cv-gatsby-badou', // Note: it must *not* have a trailing slash.
-  siteCover: '/images/back.jpeg',
-  siteFooter: '/images/back.jpeg',
+  siteCover: './images/back.jpeg',
+  siteFooter: './images/back.jpeg',
   googleAnalyticsId: 'UA-131359385-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
