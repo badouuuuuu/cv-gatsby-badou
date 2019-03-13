@@ -71,9 +71,7 @@ class Home extends React.Component {
                 <Skills title='Mes skills' skills={siteConfig.skills} />
               </Col>
             </Row>
-     
             <Timeline />
-            <div id="github"></div>
             <Repositories />
           </Container>
           <Link 

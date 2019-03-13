@@ -1,6 +1,7 @@
 const config = require("./data/siteConfig");
 
 module.exports = {
+  pathPrefix: "/cv-gatsby-badou",
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
