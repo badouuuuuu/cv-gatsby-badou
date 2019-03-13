@@ -67,7 +67,7 @@ module.exports = {
     email: "el.hirech.youssef@gmail.com@gmail.com"
   },
   siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
-  pathPrefix: '/gatsby-starter-cv', // Note: it must *not* have a trailing slash.
+  pathPrefix: '/cv-gatsby-badou', // Note: it must *not* have a trailing slash.
   siteCover: '/images/back.jpeg',
   siteFooter: '/images/back.jpeg',
   googleAnalyticsId: 'UA-131359385-1',

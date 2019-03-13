@@ -34,7 +34,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "deploy:github" : "npm run build && node ./scripts/deploy-github",
+    "deploy:github": "npm run build && node ./scripts/deploy-github",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
@@ -48,6 +48,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/badouuuuuu/cv-gatsby"
+    "url": "https://github.com/badouuuuuu/cv-gatsby-badou"
   }
 }
