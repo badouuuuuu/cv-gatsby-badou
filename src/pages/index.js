@@ -181,11 +181,11 @@ export default styled(Home)`
 .full-screen-square {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 110%;
   cursor: pointer;
 
-text-align: center;
-overflow: hidden;
+    text-align: center;
+    overflow: hidden;
 
       p {
         cursor: pointer;
@@ -198,6 +198,10 @@ overflow: hidden;
       }
       p:hover {
         color: orange;
+      }
+      .react-pdf__Page {
+        width: 1px;
+        height: 50%;
       }
 }
 

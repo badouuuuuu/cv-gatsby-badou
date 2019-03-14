@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'Youssef El Hirech',
-  siteDescription: `Create your online curriculum in just a few minutes with this starter`,
+  siteDescription: `Curriculum Vitae - El Hirech Youssef - Web Developpeur Junior`,
   authorName: 'Youssef El Hirech',
   twitterUsername: 'badouuuuuu',
   githubUsername: 'badouuuuuu',
@@ -68,8 +68,7 @@ module.exports = {
   },
   siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
   pathPrefix: '/cv-gatsby-badou', // Note: it must *not* have a trailing slash.
-  siteCover: withPrefix('/images/back.jpeg'),
-  siteFooter: withPrefix('/images/back.jpeg'),
+  siteCover: './images/back.jpeg',
   googleAnalyticsId: 'UA-131359385-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
