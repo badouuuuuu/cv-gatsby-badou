@@ -14,9 +14,55 @@ import Timeline from '../components/timeline'
 import Repositories from '../components/repositories'
 import Footer from '../components/footer'
 import FooterHero from '../components/footerhero'
+import { Flipper, Flipped } from "react-flip-toolkit";
+import { Document, Page }  from 'react-pdf'
+
 import GoTop from '../assets/gotop.svg'
+import { withPrefix } from 'gatsby';
 
 class Home extends React.Component {
+  state = { 
+    fullScreen: false,
+    numPages: null,
+    pageNumber: 1,
+    Hello:  <p>{"Voir mon CV"}</p>
+  }
+
+  onDocumentLoadSuccess = ({ numPages }) => {
+    this.setState({ numPages });
+  }
+  
+  toggleFullScreen = () => {
+    this.setState(prevState => ({
+      fullScreen: !prevState.fullScreen,
+      Hello:  <p>{"Voir mon CV"}</p>
+    }));
+
+    if(this.state.fullScreen ===  false) {
+
+      this.setState({
+        Hello : <Document
+        file={withPrefix("./images/cv.pdf")}
+        onLoadSuccess={this.onDocumentLoadSuccess}
+      >
+        <Page pageNumber={1} />
+        <p>Click to disable</p>
+
+      </Document>
+
+
+      })
+
+
+    } else {
+      this.setState({
+        Hello : <p>{"Voir mon CV"}</p>
+      })
+    }
+
+
+  };
+
   render () {
     const title = 'Je suis Youssef'
     return (
@@ -34,7 +80,6 @@ class Home extends React.Component {
 
         <Wrapper className={this.props.className} >
           <Container className="page-content" fluid>
-            <Row>
      
               <Col xs={4} className='avatar'>
                 <img
@@ -46,21 +91,20 @@ class Home extends React.Component {
                 <div id="skills"></div>
                 <div className="social">
                   {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
-                    <FaGithub className="social-icon" size="32" />
+                    <FaGithub className="social-icon" size="24" />
                   </a>}
                   {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
-                    <FaLinkedin className="social-icon" size="32"  />
+                    <FaLinkedin className="social-icon" size="24"  />
                   </a>}
                   {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
-                    <FaTwitter className="social-icon" size="32" />
+                    <FaTwitter className="social-icon" size="24" />
                   </a>}
                   {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
-                    <FaEnvelope className="social-icon" size="32" />
+                    <FaEnvelope className="social-icon" size="24" />
                   </a>}
                 </div>
  
               </Col>
-            </Row>
             <Row>
               <Col xs={4} sm={4}>
                 <About title='A propos' text={siteConfig.authorDescription}/>
@@ -86,12 +130,23 @@ class Home extends React.Component {
 
 <img className="topicon" src={GoTop} alt="icon_back_top"/>
     </Link>
-
-
-   
+    <Flipper flipKey={this.state.fullScreen}>
+    
+        <Flipped flipId="square">
+          <div
+            className={this.state.fullScreen ? "full-screen-square" : "square"}
+            onClick={this.toggleFullScreen}
+          > 
           
+          {this.state.Hello}
+  
+           </div>
+        </Flipped>
+      </Flipper>
+
+ 
         </Wrapper>
-        
+
         <FooterHero/>
         <div  id="footer" ></div>
         <Footer/>
@@ -105,6 +160,47 @@ export default styled(Home)`
     max-width: 100%;
     margin-bottom: 40px;
   }
+
+
+.square {
+  width: 7rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 0 auto;
+  color: white;
+  background-color: #000a12;
+  p {
+    font-size: .8rem;
+  }
+}
+
+.square:hover {
+  color: orange;
+}
+
+.full-screen-square {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+
+text-align: center;
+overflow: hidden;
+
+      p {
+        cursor: pointer;
+        border-radius: 1rem;
+        margin: 0 auto;
+        color: white;
+        background-color: #000a12;
+        width: 7rem;
+        font-size: .8rem;
+      }
+      p:hover {
+        color: orange;
+      }
+}
+
 
 .topicon {
   width: 20px;
