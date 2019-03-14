@@ -84,7 +84,7 @@ class Home extends React.Component {
               <Col xs={4} className='avatar'>
                 <img
                   className='avatar__image'
-                  src='/images/avatar2.jpeg'
+                  src={withPrefix('/images/avatar2.jpeg')}
                   alt='user avatar'
                 />
 
