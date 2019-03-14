@@ -74,7 +74,7 @@ class Hero extends React.Component {
 
 export default styled(Hero)`
   
-  ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
+  ${p => `background-image: url(${p.heroImg || siteConfig.siteCover});`}
   height: 110vh;
   background-attachment: fixed;
   background-position: center;

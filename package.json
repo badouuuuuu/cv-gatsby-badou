@@ -1,7 +1,7 @@
 {
   "name": "gatsby-cv-youssef",
   "private": true,
-  "description": "Gatsby CV - notfinished",
+  "description": "Gatsby CV - El Hirech Youssef",
   "version": "0.0.1",
   "author": "Youssef El Hirech <el.hirech.youssef@gmail.com>",
   "dependencies": {
@@ -49,6 +49,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/badouuuuuu/cv-gatsby"
+    "url": "https://github.com/badouuuuuu/cv-gatsby-badou"
   }
 }

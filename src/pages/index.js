@@ -16,16 +16,34 @@ import Footer from '../components/footer'
 import FooterHero from '../components/footerhero'
 import { Flipper, Flipped } from "react-flip-toolkit";
 import { Document, Page }  from 'react-pdf'
-
+import downloadIcon from '../assets/download.svg'
 import GoTop from '../assets/gotop.svg'
-import { withPrefix } from 'gatsby';
+import { withPrefix } from 'gatsby'
+
+
+const StyleButton = {
+  cursor: "pointer", 
+  border: "none", 
+  backgroundColor: "#fff5", 
+  color:"orange", 
+  borderRadius: ".5rem", 
+  width: "40px",
+  height: "40px",
+  margin: "1rem",
+  outline: "none",
+}
+
+
 
 class Home extends React.Component {
   state = { 
     fullScreen: false,
     numPages: null,
     pageNumber: 1,
-    Hello:  <p>{"Voir mon CV"}</p>
+    Hello:  <p>{"Voir mon CV"}</p>,
+    DownloadCv:         <a href="./images/cv.pdf" target="_blank" rel="noopener noreferrer"  download> 
+      <p className="download_cv">  Télécharger mon CV </p>
+   </a>
   }
 
   onDocumentLoadSuccess = ({ numPages }) => {
@@ -35,20 +53,25 @@ class Home extends React.Component {
   toggleFullScreen = () => {
     this.setState(prevState => ({
       fullScreen: !prevState.fullScreen,
-      Hello:  <p>{"Voir mon CV"}</p>
+      Hello:  <p>{"Voir mon CV"}</p>,
+      
     }));
 
     if(this.state.fullScreen ===  false) {
 
       this.setState({
         Hello : <Document
-        file={withPrefix("./images/cv.pdf")}
+        file="./images/cv.pdf"
         onLoadSuccess={this.onDocumentLoadSuccess}
       >
         <Page pageNumber={1} />
-        <p>Click to disable</p>
+        
+
+
+
 
       </Document>
+
 
 
       })
@@ -84,7 +107,7 @@ class Home extends React.Component {
               <Col xs={4} className='avatar'>
                 <img
                   className='avatar__image'
-                  src={withPrefix('/images/avatar2.jpeg')}
+                  src='./images/avatar2.jpeg'
                   alt='user avatar'
                 />
 
@@ -139,11 +162,12 @@ class Home extends React.Component {
           > 
           
           {this.state.Hello}
-  
+
            </div>
         </Flipped>
       </Flipper>
 
+      {this.state.DownloadCv}
  
         </Wrapper>
 
@@ -187,6 +211,10 @@ export default styled(Home)`
     text-align: center;
     overflow: hidden;
 
+    a {
+      text-decoration: none;
+    }
+
       p {
         cursor: pointer;
         border-radius: 1rem;
@@ -199,12 +227,29 @@ export default styled(Home)`
       p:hover {
         color: orange;
       }
-      .react-pdf__Page {
-        width: 1px;
-        height: 50%;
-      }
+
 }
 
+
+.download_cv {
+  
+    cursor: pointer;
+    border-radius: 1rem;
+    margin: 0 auto;
+    color: white;
+    background-color: #000a12;
+    width: 7rem;
+    font-size: .8rem;
+
+}
+
+.download_cv:hover {
+  color: orange;
+}
+
+a {
+  text-decoration: none;
+}
 
 .topicon {
   width: 20px;

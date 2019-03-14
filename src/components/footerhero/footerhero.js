@@ -61,20 +61,20 @@ class FooterHero extends React.Component {
         <FooterTitleContainer>
           <FooterHeroTitle>{title}</FooterHeroTitle>
 
-        <p className="download_cv">  Télécharger mon CV </p>
+        {/* <p className="download_cv">  Télécharger mon CV </p>
         <a href="https://drive.google.com/file/d/1XYVN2qqVQKUsb4TNzdw4vaFXd5kQTCMT/view?usp=sharing" target="_blank" rel="noopener noreferrer"  > <button className="button_footer" style={StyleButton}><img src={downloadIcon} alt="download"/></button></a>
-          
+           */}
           <div className="social">
-                  {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github}>
+                  {siteConfig.social.github && <a className="social-link github" href={siteConfig.social.github} target="_blank">
                     <FaGithub className="social-icon" size="22" />
                   </a>}
-                  {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin}>
+                  {siteConfig.social.linkedin && <a className="social-link linkedin" href={siteConfig.social.linkedin} target="_blank">
                     <FaLinkedin className="social-icon" size="22"  />
                   </a>}
-                  {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter}>
+                  {siteConfig.social.twitter && <a className="social-link twitter" href={siteConfig.social.twitter} target="_blank">
                     <FaTwitter className="social-icon" size="22" />
                   </a>}
-                  {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`}>
+                  {siteConfig.social.email && <a className="social-link email" href={`mailto:${siteConfig.social.email}`} target="_blank">
                     <FaEnvelope className="social-icon" size="22" />
                   </a>}
                 </div>
@@ -86,18 +86,14 @@ class FooterHero extends React.Component {
 
 export default styled(FooterHero)`
   
-  ${p => `background-image: url(${p.heroImg || withPrefix(siteConfig.siteCover)});`}
+  ${p => `background-image: url(${p.heroImg || siteConfig.siteCover});`}
 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 8rem;
 
-.download_cv{
-  margin-top: 1rem;
-  margin-bottom: -.35rem;
-  color: grey;
-}
 
 
   .social {

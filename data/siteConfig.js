@@ -1,5 +1,5 @@
 module.exports = {
-  siteTitle: 'Youssef El Hirech',
+  siteTitle: 'Junior Web Developpeur',
   siteDescription: `Curriculum Vitae - El Hirech Youssef - Web Developpeur Junior`,
   authorName: 'Youssef El Hirech',
   twitterUsername: 'badouuuuuu',
@@ -66,18 +66,18 @@ module.exports = {
     github: "https://github.com/badouuuuuu",
     email: "el.hirech.youssef@gmail.com@gmail.com"
   },
-  siteUrl: 'https://badouuuuuu.github.io/gatsby-badouuuuuu-cv',
-  pathPrefix: '/cv-gatsby-badou', // Note: it must *not* have a trailing slash.
+  siteUrl: 'https://badouuuuuu.github.io/cv-gatsby-badou',
+  pathPrefix: '/', // Note: it must *not* have a trailing slash.
   siteCover: './images/back.jpeg',
-  googleAnalyticsId: 'UA-131359385-1',
+  googleAnalyticsId: 'UA-136249840-1',
   background_color: '#ffffff',
   theme_color: '#25303B',
   display: 'minimal-ui',
   icon: 'src/assets/gatsby-icon.png',
   headerLinks: [
     {
-      label: 'Youssef El Hirech',
-      url: '/',
+      label: 'Junior Web Developpeur',
+      url: 'www.badou.be',
     }
   ]
 }
