@@ -7,10 +7,9 @@ module.exports = {
   authorAvatar: '/images/avatar2.jpeg',
   authorDescription: ` Je suis un developpeur junior ayant commencé le code il y a tout juste 6 mois.
   Avant celà, j'ai travaillé pendant près de 10 ans dans un service clientèle. Totalement passioné de technologie et de numérique.
-  Je suis a la recherche d'un stage dans le domaine du web, que celà soit en backend, ou frontend.
   J'aime travailler sous <strong>Javascript, NodeJS, ou ReactJS</strong>. <br/>
-   <br/> Actuellement a la recherche d'un stage, je suis prêt a apprendre de nouveaux language,
-   ou d'appronfondir ceux déjà présent dans ma liste de skills`,
+   <br/> Actuellement à la recherche d'un stage, je suis prêt a apprendre de nouveaux language,
+   ou d'appronfondir ceux déjà présent dans ma liste de skills, motivé, j'adore back-end comme front-end`,
   
   jobs: [
     {
@@ -46,16 +45,68 @@ module.exports = {
       },
       duration: '2 ans & 5 mois',
       occupation: "Support Clientèle",
-      description: "Middle-Office sur le projet Luminus, service déménagement"
-    }, {
+      description: "Agent Middle-Office sur le projet Luminus, service déménagement"
+    }, 
+
+    {
       company: "Target Power Group",
       begin: {
-        month: 'set',
+        month: 'sept',
         year: '2010'
       },
       duration: '1 an',
+      occupation: "Expert Belgacom - Second ligne",
+      description: "Expert Mobile, agent deuxième ligne Belgacom."
+  
+    },
+    
+
+    {
+      company: "Target Power Group",
+      begin: {
+        month: 'sept',
+        year: '2009'
+      },
+      duration: '1 an & 5 mois',
+      occupation: "Formateur",
+      description: "Former les agents call-center sur les technologies Belgacom TV/NET/TEL."
+  
+    },
+
+    
+    
+    {
+      company: "Target Power Group",
+      begin: {
+        month: 'sept',
+        year: '2008'
+      },
+      duration: '1 an',
       occupation: "Support clientèle",
-      description: "Agent Call Center Front-Office sur le projet Belgacom TV/NET/TEL, par la suite promu en tant que formateur TV & NET pendant 2 années. Expert Back Office seconde ligne"
+      description: "Agent Call Center Front-Office sur le projet Belgacom TV/NET/TEL."
+  
+    },
+
+    {
+      company: "ESCO Turbines",
+      begin: {
+        month: 'jan',
+        year: '2008'
+      },
+      duration: '2 mois',
+      occupation: "Stagiaire électricien de maintenance",
+      description: "maintenance des équipements électrique"
+    }, 
+    
+    {
+      company: "BALTEAU I.E",
+      begin: {
+        month: 'set',
+        year: '2007'
+      },
+      duration: '2 mois',
+      occupation: "Intallateur/monteur",
+      description: "Installation de système informatique & électrique"
   
     },
     /* ... */
