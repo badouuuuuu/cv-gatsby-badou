@@ -1,5 +1,4 @@
 import React from 'react'
-import { withPrefix } from 'gatsby'
 import siteConfig from '../../../data/siteConfig'
 import styled from 'styled-components'
 
@@ -46,7 +45,7 @@ class Hero extends React.Component {
     return (
       <>
       <div id="top"></div>
-      <HeroContainer className={className}>
+      <HeroContainer className={this.props.className}>
         <TitleContainer>
           <HeroTitle>{title}</HeroTitle>
 

@@ -16,23 +16,7 @@ import Footer from '../components/footer'
 import FooterHero from '../components/footerhero'
 import { Flipper, Flipped } from "react-flip-toolkit";
 import { Document, Page }  from 'react-pdf'
-import downloadIcon from '../assets/download.svg'
 import GoTop from '../assets/gotop.svg'
-import { withPrefix } from 'gatsby'
-
-
-const StyleButton = {
-  cursor: "pointer", 
-  border: "none", 
-  backgroundColor: "#fff5", 
-  color:"orange", 
-  borderRadius: ".5rem", 
-  width: "40px",
-  height: "40px",
-  margin: "1rem",
-  outline: "none",
-}
-
 
 
 class Home extends React.Component {
@@ -64,7 +48,7 @@ class Home extends React.Component {
         file="./images/cv_el_hirech_youssef.pdf"
         onLoadSuccess={this.onDocumentLoadSuccess}
       >
-        <Page pageNumber={1} />
+        <Page pageNumber={1} width={560}/>
         
 
 
@@ -99,6 +83,7 @@ class Home extends React.Component {
         <Hero
           heroImg={siteConfig.siteCover}
           title={title}
+          className={this.props.className}
         />
 
         <Wrapper className={this.props.className} >
@@ -139,7 +124,7 @@ class Home extends React.Component {
               </Col>
             </Row>
      
-            <Timeline />
+            <Timeline  className={this.props.className}/>
             <div id="github"></div>
             <Repositories />
           </Container>
@@ -171,7 +156,8 @@ class Home extends React.Component {
  
         </Wrapper>
 
-        <FooterHero/>
+        <FooterHero           className={this.props.className}
+/>
         <div  id="footer" ></div>
         <Footer/>
       </Layout>
@@ -205,7 +191,7 @@ export default styled(Home)`
 .full-screen-square {
   position: relative;
   height: 100%;
-  width: 110%;
+  width: 100%;
   cursor: pointer;
 
     text-align: center;
@@ -226,6 +212,13 @@ export default styled(Home)`
       }
       p:hover {
         color: orange;
+      }
+
+      .react-pdf__Page__canvas {
+        width: 100% !important;
+        overflow-x: scroll !important;
+        padding-right: 1.5rem !important;
+        height: 100% !important;
       }
 
 }
