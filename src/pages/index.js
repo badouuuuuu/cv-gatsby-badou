@@ -41,7 +41,7 @@ class Home extends React.Component {
     numPages: null,
     pageNumber: 1,
     Hello:  <p>{"Voir mon CV"}</p>,
-    DownloadCv:         <a href="./images/cv.pdf" target="_blank" rel="noopener noreferrer"  download> 
+    DownloadCv:         <a href="./images/cv_el_hirech_youssef.pdf" target="_blank" rel="noopener noreferrer"  download> 
       <p className="download_cv">  Télécharger mon CV </p>
    </a>
   }
