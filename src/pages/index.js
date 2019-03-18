@@ -61,7 +61,7 @@ class Home extends React.Component {
 
       this.setState({
         Hello : <Document
-        file="./images/cv.pdf"
+        file="./images/cv_el_hirech_youssef.pdf"
         onLoadSuccess={this.onDocumentLoadSuccess}
       >
         <Page pageNumber={1} />
