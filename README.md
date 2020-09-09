@@ -1,1 +1,2 @@
-Gatsby JS CV  Youssef
+Gatsby JS CV
+https://badouuuuuu.github.io/cv-gatsby-badou/
